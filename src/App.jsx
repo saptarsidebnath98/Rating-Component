@@ -4,6 +4,7 @@ import ThankPage from "./components/ThankPage";
 
 function App() {
   const [rating, setRating] = useState();
+  const [alert, setAlert] = useState(false);
   const [showThanks, setShowThanks] = useState(false);
 
     function handleClick(e){
@@ -11,17 +12,27 @@ function App() {
     }
 
     function handleSubmit(){
+      if(rating === undefined){
+        setAlert(true);
+      }else{
         setShowThanks(true);
+        setAlert(false);
+      }
+        
+    }
+
+    function handleClose(){
+        setShowThanks(false);
+        setRating(undefined);
     }
 
   return (
     <div className="h-screen w-screen bg-VeryDarkBlue flex justify-center items-center">
-      <div className="container w-3/12 h-3/6 bg-DarkBlue rounded-3xl shadow-lg px-8 py-8 text-sm font">
+      <div className="container mx-2 w-full h-4/6 md:w-3/12 md:h-3/6 bg-DarkBlue rounded-3xl shadow-lg px-8 py-8 text-sm font select-none">
         {showThanks ? 
-        <ThankPage rating={rating}/> : 
-        <RatingPage handleClick={handleClick} handleSubmit={handleSubmit}/>}
-        
-        
+        <ThankPage rating={rating} handleClose={handleClose}/> : 
+        <RatingPage handleClick={handleClick} handleSubmit={handleSubmit} 
+        alert={alert}/>}
       </div>
     </div>
   )

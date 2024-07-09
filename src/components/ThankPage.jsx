@@ -1,5 +1,6 @@
+import { IoCloseSharp } from "react-icons/io5";
 
-export default function ThankPage({rating}) {
+export default function ThankPage({rating, handleClose}) {
     return (
         <div className="h-full w-full flex flex-col justify-between items-center font-Overpass">
             <img
@@ -15,6 +16,11 @@ export default function ThankPage({rating}) {
             <p className="text-center text-LightGrey">
                 We appreciate you taking the time to give a rating. If you ever need more support, don&#39;t hesitate to get in touch!
             </p>
+            <button 
+            onClick={handleClose}
+            className="bg-Orange rounded-full h-6 w-6 flex justify-center items-center font-bold cursor-pointer">
+                <IoCloseSharp />
+            </button>
         </div>
     )
 }
