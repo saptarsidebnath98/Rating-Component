@@ -3,7 +3,7 @@ import { IoCloseSharp } from "react-icons/io5";
 
 export default function ThankPage({rating, handleClose}) {
     return (
-        <div className="h-full w-full flex flex-col justify-between items-center font-Overpass">
+        <div className="h-full w-full flex flex-col gap-5 justify-between items-center font-Overpass">
             <img
                 className="h-auto w-2/6"
                 src="images/illustration-thank-you.svg"

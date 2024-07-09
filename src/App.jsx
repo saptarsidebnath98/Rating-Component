@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="h-screen w-screen bg-VeryDarkBlue flex justify-center items-center">
-      <div className="container mx-2 w-full h-4/6 md:w-3/12 md:h-3/6 bg-DarkBlue rounded-3xl shadow-lg px-8 py-8 text-sm font select-none">
+      <div className="container mx-2 w-full h-auto md:w-3/12 md:h-auto bg-DarkBlue rounded-3xl shadow-lg px-8 py-8 text-sm font select-none">
         {showThanks ? 
         <ThankPage rating={rating} handleClose={handleClose}/> : 
         <RatingPage handleClick={handleClick} handleSubmit={handleSubmit} 

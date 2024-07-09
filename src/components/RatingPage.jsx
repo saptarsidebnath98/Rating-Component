@@ -4,7 +4,7 @@ export default function RatingPage({handleClick, handleSubmit, alert}) {
 
     const btnDesign = "bg-gray-700 h-10 w-10 font-bold text-LightGrey rounded-full text-center hover:bg-Orange cursor-pointer text-sm focus:bg-White";
   return (
-    <div className="flex flex-col justify-between h-full w-full">
+    <div className="flex flex-col justify-between h-full w-full gap-5">
         <div className="h-10 w-10 flex justify-center items-center rounded-full bg-gray-700">
             <img src="images/icon-star.svg" alt="star icon" />
         </div>
