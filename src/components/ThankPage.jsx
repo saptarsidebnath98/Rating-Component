@@ -1,5 +1,5 @@
 
-export default function ThankPage() {
+export default function ThankPage({rating}) {
     return (
         <div className="h-full w-full flex flex-col justify-between items-center font-Overpass">
             <img
@@ -7,7 +7,7 @@ export default function ThankPage() {
                 src="images/illustration-thank-you.svg"
                 alt="thank you png" />
             <div className="px-6 py-2 bg-slate-700 rounded-2xl flex justify-center items-center text-Orange">
-                <p>You selected 4 out of 5</p>
+                <p>You selected {rating} out of 5</p>
             </div>
             <h3 className="text-2xl text-White font-bold">
                 Thank you!
