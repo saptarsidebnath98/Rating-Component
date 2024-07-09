@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { IoCloseSharp } from "react-icons/io5";
 
 export default function ThankPage({rating, handleClose}) {

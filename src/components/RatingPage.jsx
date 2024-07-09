@@ -23,7 +23,7 @@ export default function RatingPage({handleClick, handleSubmit, alert}) {
                 </button>
             })}
         </div>
-        {alert && <p className="text-red-600 text-xs mx-auto">Please select value before submitting</p>}  
+        {alert && <p className="text-red-600 text-xs mx-auto">Please select value before submitting!</p>}  
         <button 
         onClick={handleSubmit}
         className="bg-Orange text-VeryDarkBlue uppercase font-Overpass py-3 rounded-3xl font-bold cursor-pointer hover:bg-White">
